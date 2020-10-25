@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Login from './Components/Forms/Login'
 
 function App() {
   return (
     <div className="App">
-      Welcome To TODO app !
+      <Login />
     </div>
   );
 }
