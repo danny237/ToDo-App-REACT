@@ -1,0 +1,8 @@
+1. Authentication
+    a. Email != "" && password != "".
+    b. Email and Password should validated.
+    c. If Email and Password Validated then redirect to home page
+2. Home Page:
+    a. Create Title and description
+    b. added the task to the Task list
+    c. Each component contain heart,delete and complete button

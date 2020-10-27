@@ -21,13 +21,12 @@ export default function Login() {
 
     return (
         <div className="login-page">
-            <div className="container d-flex justify-content-center align-items-center">
+            <div className="login-container d-flex justify-content-center align-items-center">
                 <div className="box text-center col col-md-7 col-lg-5">
 
                     {/* header section */}
                     <div className="header-section mt-5 mb-3">
                         <h2 className="font-weight-bold">Sign In</h2>
-                        <img className="my-3" alt="Icon" src="https://www.flaticon.com/svg/static/icons/svg/847/847969.svg" />
                     </div>
 
                     {/* form */}
@@ -53,7 +52,7 @@ export default function Login() {
                             />
                             <button
                                 onClick={(e) => submitHandler(e)}
-                                className="btn col-5 my-3">Authenticate</button>
+                                className="authenticate-btn col-5 my-3">Authenticate</button>
                         </div>
                     </form>
                     {

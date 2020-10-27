@@ -1,0 +1,25 @@
+.todo-page{
+    background-color: #5C105D;
+    height: 100vh;
+    color: #fff;
+}
+
+
+.logout-btn{
+    background-color: #DDB92A;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+}
+
+nav, nav a{
+    background-color: #1958A7;
+    color: #fff;
+}
+
+.add-task{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 14px 52px 13px rgba(0, 0, 0, 0.2);
+}
+
+ 
