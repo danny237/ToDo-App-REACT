@@ -4,5 +4,8 @@
     c. If Email and Password Validated then redirect to home page
 2. Home Page:
     a. Create Title and description
+        i. title and description shouldn't be empty
     b. added the task to the Task list
+        i. List items are in reverse order so that latest post are at top
+        ii. if the task is complete then the text are cross
     c. Each component contain heart,delete and complete button
