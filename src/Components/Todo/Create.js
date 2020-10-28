@@ -1,22 +1,31 @@
 import React, { useState, useEffect} from 'react'
 import './Create.css'
+import Error from './Error'
 
 export default function Create({tasks, setTasks}) {
 
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
+    const [error, setError] = useState("")
 
     useEffect(() => {
     }, [])
 
     const addHandler = (e) => {
         e.preventDefault()
-        const newTask = {
-            title,
-            description
-        }
 
-        setTasks([...tasks, newTask])
+        if (title === "" || description === ""){
+            setError(true)
+        }else{
+            setError(false)
+            const date = new Date()
+            const newTask = {
+                title,
+                description,
+                created_at: date.toLocaleString()           
+            }
+            setTasks([...tasks, newTask])
+        }
     }
 
     return (
@@ -39,6 +48,7 @@ export default function Create({tasks, setTasks}) {
                 ></textarea>
                 <button onClick={(e) => addHandler(e)} className="add-btn btn form-control">Add</button>
             </form>
+            {error && <Error />}
             
         </div>
     )
