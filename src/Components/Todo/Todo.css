@@ -2,10 +2,11 @@
     background-color: #5C105D;
     height: 100vh;
     color: #fff;
+    margin-top: -16px;
 }
 
 .logout-btn{
-    background-color: #DDB92A;
+    background-color: #fff;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 

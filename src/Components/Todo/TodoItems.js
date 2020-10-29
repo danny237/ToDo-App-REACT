@@ -3,7 +3,7 @@ import './TodoItems.css'
 // import Checkbox from '@material-ui/core/Checkbox';
 
 const COMPLETE_STYLE = { backgroundColor: "#008000", cursor: "pointer", borderRadius: "50%" }
-const NOT_COMPLETE_STYLE = { color: "#fff", cursor: "pointer" }
+const NOT_COMPLETE_STYLE = { backgroundColor: "#fff", cursor: "pointer", borderRadius: "50%"}
 const HEARTED_STYLE = { color: "red", cursor: "pointer" }
 const NOT_HERTED_STYLE = { color: "#fff", cursor: "pointer" }
 
