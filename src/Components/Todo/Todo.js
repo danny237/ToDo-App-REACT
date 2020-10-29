@@ -4,11 +4,13 @@ import EmptyMessage from './EmptyMessage'
 import TodoItems from './TodoItems'
 import './Todo.css'
 
+import { Link } from 'react-router-dom'
+
 const EMPTY_MESSAGE = "Taks is Empty !"
 
 const date_now = new Date()
 
-export default function Todo({setLoginStatus}) {
+export default function Todo({setLoginStatus, loginStatus}) {
 
     const [tasks, setTasks] = useState([])
     const [isTasksEmpty, setTasksStatus] = useState(true)
@@ -23,6 +25,19 @@ export default function Todo({setLoginStatus}) {
 
     return (
         <div className="todo-page">
+
+            <nav className="navbar">
+            <div className="container">
+              <a className="navbar-brand" href="#">ToDo App</a>
+                <button
+                  className="btn logout-btn"
+                  onClick={() => setLoginStatus(false)}
+                >Logout</button>
+                
+                  
+            </div>
+          </nav>
+
             <div className="container col-md-7">
 
                 <div className="date mt-3 d-flex">

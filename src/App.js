@@ -3,11 +3,13 @@ import './App.css';
 import Login from './Components/Forms/Login'
 import Home from './Components/Home';
 import Todo from './Components/Todo/Todo';
+import Register from './Components/Forms/Register'
 import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link
+  Link,
+  Redirect,
 } from 'react-router-dom';
 
 import { ADMIN_EMAIL, ADMIN_PASSWORD } from './Components/Constants/FormConstants'
@@ -23,41 +25,28 @@ function App() {
 
   const [loginStatus, setLoginStatus] = useState(false)
 
-  console.log("I am from app js")
-
   return (
     <div className="App">
-      
-      <nav className="navbar">
-        <div className="container">
-            <a className="navbar-brand" href="#">ToDo App</a>
-            {loginStatus ?
-            <button
-                className="btn logout-btn"
-                onClick = {() => setLoginStatus(false)}
-            >Logout</button> :
-            <button
-                className="btn logout-btn"
-            >Register</button>
-          }
-        </div>
-      </nav>
-      
       <Router>
         <Switch>
+          
 
-        
+
+
+          <Route exact path="/register" component={Register} />
+
+
           <Route
             exact
-            path= {"/"}
-            render = {(props) => (
+            path="/"
+            render={(props) => (
               loginStatus ?
-              <Todo setLoginStatus={setLoginStatus}/> :
-              <Login {...props} users={users} setLoginStatus={setLoginStatus} />
+                <Todo setLoginStatus={setLoginStatus} loginStatus={loginStatus} /> :
+                <Login users={users} loginStatus={loginStatus} setLoginStatus={setLoginStatus} />
             )}
           />
 
-          
+
         </Switch>
       </Router>
 

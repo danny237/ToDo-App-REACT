@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react'
 import './LoginStyle.css'
 import Error from './Error'
 
+import { Link } from 'react-router-dom'
+
 import {
     INITIAL_STATE,
 } from './Constants'
 
-export default function Login({users, setLoginStatus}) {
+export default function Login({users, setLoginStatus, loginStatus}) {
 
     const [email, setEmail] = useState(INITIAL_STATE)
     const [password, setPassword] = useState(INITIAL_STATE)
@@ -33,6 +35,20 @@ export default function Login({users, setLoginStatus}) {
 
     return (
         <div className="login-page">
+
+            <nav className="navbar">
+                        <div className="container">
+                        <a className="navbar-brand" href="#">ToDo App</a>
+                            <Link to="/register">
+                            <button
+                                className="btn logout-btn"
+
+                            >Register</button>
+                            </Link>
+                      
+                        </div>
+                    </nav>
+
             <div className="login-container d-flex justify-content-center align-items-center">
                 <div className="box text-center col-md-5 col-sm-10">
 

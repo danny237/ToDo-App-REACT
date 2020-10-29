@@ -65,10 +65,12 @@ export default function TodoItems({ tasks, setTasks }) {
                                             onClick={() => heartHandler(index)}
                                             className="fas fa-heart mx-2"
                                             style={item.isHearted ? HEARTED_STYLE : NOT_HERTED_STYLE}></i>
+                                        <button disabled={item.isHearted && true} onClick={() => deleteHandler(index)}>
                                         <i
-                                            onClick={() => deleteHandler(index)}
+                                            
                                             className="fas fa-trash-alt disabled"
                                             style={{ cursor: "pointer" }} ></i>
+                                        </button>
                                     </small>
                                 </div>
                             </div>
@@ -77,7 +79,7 @@ export default function TodoItems({ tasks, setTasks }) {
                                         <i className="far fa-check-circle fa-2x"
                                             style={item.isComplete ? COMPLETE_STYLE : NOT_COMPLETE_STYLE}
                                             onClick={() => completeHandler(index)}
-                                        ></i>                             
+                                        ></i>                           
                                 </div>
                             </div>
                         </div>
