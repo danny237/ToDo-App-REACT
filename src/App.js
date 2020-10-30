@@ -1,15 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Login from './Components/Forms/Login'
-import Home from './Components/Home';
 import Todo from './Components/Todo/Todo';
 import Register from './Components/Forms/Register'
 import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
-  Redirect,
 } from 'react-router-dom';
 
 import { ADMIN_EMAIL, ADMIN_PASSWORD } from './Components/Constants/FormConstants'

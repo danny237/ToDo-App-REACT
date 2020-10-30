@@ -7,3 +7,15 @@ button {
     border-style: none;
     background-color: #1958A7;
 }
+
+.tasks-items .item{
+    color: #fff
+}
+
+.tasks{
+    background-color: #900;
+}
+
+.description{
+    width: 100%;
+}
