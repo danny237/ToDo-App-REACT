@@ -19,6 +19,11 @@ export default function Todo({ setLoginStatus, loginStatus }) {
         }
     })
 
+    const logoutHandler = () => {
+        setLoginStatus(false)
+        localStorage.removeItem("loginStatus")
+    }
+
     return (
         <div className="todo-page">
             <nav className="navbar">
@@ -26,7 +31,7 @@ export default function Todo({ setLoginStatus, loginStatus }) {
                     <a className="navbar-brand" href="#">ToDo App</a>
                     <button
                         className="btn logout-btn"
-                        onClick={() => setLoginStatus(false)}
+                        onClick={() => logoutHandler()}
                     >Logout</button>
                 </div>
             </nav>

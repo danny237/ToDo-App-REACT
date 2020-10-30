@@ -23,6 +23,7 @@ export default function Login({users, setLoginStatus}) {
             for(let i=0; i<users.length; i++){
                 if(users[i].email === email && users[i].password === password){
                     setLoginStatus(true)
+                    localStorage.setItem("loginStatus", "true")
                 }else{
                     setErrorStatus(true)
                 }
@@ -30,7 +31,6 @@ export default function Login({users, setLoginStatus}) {
             setErrorStatus(false)
         }
     }
-
 
     return (
         <div className="login-page">

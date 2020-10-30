@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Login from './Components/Forms/Login'
 import Todo from './Components/Todo/Todo';
@@ -20,6 +20,15 @@ function App() {
     },
   ])
   const [loginStatus, setLoginStatus] = useState(false)
+
+  useEffect(() => {
+    let isLoggedIn = JSON.parse(localStorage.getItem("loginStatus"))
+    if(isLoggedIn === null || isLoggedIn === false){
+      setLoginStatus(false)
+    }else{
+      setLoginStatus(true)
+    }
+  },[])
 
   return (
     <div className="App">
