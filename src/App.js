@@ -17,30 +17,16 @@ function App() {
     {
       email: ADMIN_EMAIL,
       password: ADMIN_PASSWORD
-    }
+    },
   ])
   const [loginStatus, setLoginStatus] = useState(false)
-  // localStorage.setItem("loginStatus", "false")
-  
-  // const getLoginStatus = () => {
-  //   let x = JSON.parse(localStorage.getItem("loginStatus"))
-  //   console.log(x)
-  // }
-
-
-  // useEffect(() => {
-  //   if (getLoginStatus()) {
-  //     setLoginStatus(true)
-  //   }else{
-  //     setLoginStatus(false)
-  //   }
-  // })
 
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/register" component={Register} />
+          <Route exact path="/register"
+          render={(props) => (<Register {...props} users={users} setUsers={setUsers} />)}/>
           <Route
             exact
             path="/"
@@ -50,16 +36,8 @@ function App() {
                 <Login users={users} loginStatus={loginStatus} setLoginStatus={setLoginStatus} />
             )}
           />
-
-
         </Switch>
       </Router>
-
-
-
-
-      {/* <Login users={users} setLoginStatus={setLoginStatus} />
-      <Todo /> */}
     </div>
   );
 }

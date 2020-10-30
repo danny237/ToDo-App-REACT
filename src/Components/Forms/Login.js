@@ -8,7 +8,7 @@ import {
     INITIAL_STATE,
 } from './Constants'
 
-export default function Login({users, setLoginStatus, loginStatus}) {
+export default function Login({users, setLoginStatus}) {
 
     const [email, setEmail] = useState(INITIAL_STATE)
     const [password, setPassword] = useState(INITIAL_STATE)
@@ -25,7 +25,6 @@ export default function Login({users, setLoginStatus, loginStatus}) {
                     setLoginStatus(true)
                 }else{
                     setErrorStatus(true)
-                    return
                 }
             }
             setErrorStatus(false)
