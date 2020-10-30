@@ -44,29 +44,29 @@ export default function Register(props) {
                     </Link>
                 </div>
             </nav>
-            <div className="container">
-                <div className="registration-page p-2 mt-3">
-                    <h1 className="mt-4 text-center">User Registration Form</h1>
+            <div className="container registration-page d-flex justify-content-center align-items-center">
+                <div className="registration-box p-4 col-10 col-lg-8">
+                    <h3 className="mt-4 text-center">User Registration Form</h3>
                     <div className="justify-content-center">
                         <form className="form-group my-4" onSubmit={(e) => submitHandler(e)}>
                             <input
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="form-control"
+                                className="border-0 p-2 mx-auto my-3 form-control text-center"
                                 type="text"
                                 placeholder="Email" />
 
                             <input
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="form-control my-2"
+                                className="border-0 p-2 mx-auto my-3 form-control text-center"
                                 type="password"
                                 placeholder="Password" />
 
                             <input
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
-                                className="form-control"
+                                className="border-0 p-2 mx-auto my-3 form-control text-center"
                                 type="password"
                                 placeholder="Confirm Password" />
                             <button className="btn btn-primary mt-2 form-control" type="submit">Submit</button>
