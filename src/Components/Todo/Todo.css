@@ -1,9 +1,10 @@
 .todo-page{
-    background-color: #5C105D;
+    background-color: #fff;
     height: 100vh;
-    color: #fff;
-
+    color: #000;
 }
+
+
 
 .logout-btn{
     background-color: #fff;
@@ -18,7 +19,7 @@ nav, nav a{
 .add-task{
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 20px rgba(99, 99, 99, 0.5);
 }
 
 .todo-list{
@@ -26,6 +27,6 @@ nav, nav a{
     border-radius: 10px;
     max-height: 51vh;
     overflow: auto;
-    box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 20px rgba(99, 99, 99, 0.5);
 }
  

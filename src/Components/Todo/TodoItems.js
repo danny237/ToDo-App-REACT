@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './TodoItems.css'
 // import Checkbox from '@material-ui/core/Checkbox';
 
@@ -65,9 +65,8 @@ export default function TodoItems({ tasks, setTasks }) {
                                             onClick={() => heartHandler(index)}
                                             className="fas fa-heart mx-2"
                                             style={item.isHearted ? HEARTED_STYLE : NOT_HERTED_STYLE}></i>
-                                        <button disabled={item.isHearted && true} onClick={() => deleteHandler(index)}>
-                                        <i
-                                            
+                                        <button className="p-0" disabled={item.isHearted && true} onClick={() => deleteHandler(index)} >
+                                        <i 
                                             className="fas fa-trash-alt disabled"
                                             style={{ cursor: "pointer" }} ></i>
                                         </button>

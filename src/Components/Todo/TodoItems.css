@@ -2,3 +2,8 @@
     background-color: #1958A7;
     border-radius: 10px;
 }
+
+button {
+    border-style: none;
+    background-color: #1958A7;
+}
