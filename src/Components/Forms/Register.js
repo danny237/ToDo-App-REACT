@@ -36,7 +36,7 @@ export default function Register(props) {
         <React.Fragment>
             <nav className="navbar">
                 <div className="container">
-                    <h3 className="navbar-bran font-size-bolder">ToDo App</h3>
+                    <h3 className="navbar-bran">ToDo App</h3>
                     <Link to="/">
                         <button
                             className="btn logout-btn"
@@ -46,7 +46,7 @@ export default function Register(props) {
             </nav>
             <div className="container registration-page d-flex justify-content-center align-items-center">
                 <div className="registration-box p-4 col-10 col-lg-8">
-                    <h3 className="mt-4 text-center">User Registration Form</h3>
+                    <h2 className="mt-4 text-center">User Registration Form</h2>
                     <div className="justify-content-center">
                         <form className="form-group my-4" onSubmit={(e) => submitHandler(e)}>
                             <input
