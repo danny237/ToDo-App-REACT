@@ -1,11 +1,12 @@
 import React from 'react'
 import './TodoItems.css'
-// import Checkbox from '@material-ui/core/Checkbox';
 
 const COMPLETE_STYLE = { backgroundColor: "#008000", cursor: "pointer", borderRadius: "50%" }
 const NOT_COMPLETE_STYLE = { backgroundColor: "#eee", cursor: "pointer", borderRadius: "50%" }
 const HEARTED_STYLE = { color: "red", cursor: "pointer" }
 const NOT_HERTED_STYLE = { color: "#fff", cursor: "pointer" }
+const DELETE_STYLE = { cursor: "pointer", color: "white" }
+const DELETE_DISABLE_STYLE = { cursor: "pointer", color: "#aaa" }
 
 export default function TodoItems({ tasks, setTasks }) {
 
@@ -68,7 +69,7 @@ export default function TodoItems({ tasks, setTasks }) {
                                         <button className="p-0" disabled={item.isHearted && true} onClick={() => deleteHandler(index)} >
                                             <i
                                                 className="fas fa-trash-alt disabled"
-                                                style={{ cursor: "pointer" }} ></i>
+                                                style={item.isHearted ? DELETE_DISABLE_STYLE : DELETE_STYLE } ></i>
                                         </button>
                                     </small>
                                 </div>

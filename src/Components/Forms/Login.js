@@ -19,6 +19,7 @@ export default function Login({users, setLoginStatus}) {
 
         if (email === "" || password === ""){
             setErrorStatus(true)
+            return;
         }else{
             for(let i=0; i<users.length; i++){
                 if(users[i].email === email && users[i].password === password){
@@ -28,7 +29,7 @@ export default function Login({users, setLoginStatus}) {
                     setErrorStatus(true)
                 }
             }
-            setErrorStatus(false)
+            setErrorStatus(true)
         }
     }
 
@@ -37,7 +38,7 @@ export default function Login({users, setLoginStatus}) {
 
             <nav className="navbar">
                         <div className="container">
-                        <a className="navbar-brand" href="#">ToDo App</a>
+                        <h3 className="navbar-brand">ToDo App</h3>
                             <Link to="/register">
                             <button
                                 className="btn logout-btn"

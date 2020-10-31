@@ -28,7 +28,7 @@ export default function Todo({ setLoginStatus, loginStatus }) {
         <div className="todo-page">
             <nav className="navbar">
                 <div className="container">
-                    <a className="navbar-brand" href="#">ToDo App</a>
+                    <h3 className="navbar-brand">ToDo App</h3>
                     <button
                         className="btn logout-btn"
                         onClick={() => logoutHandler()}

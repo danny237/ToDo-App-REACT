@@ -36,7 +36,7 @@ export default function Register(props) {
         <React.Fragment>
             <nav className="navbar">
                 <div className="container">
-                    <a className="navbar-brand" href="#">ToDo App</a>
+                    <h3 className="navbar-bran font-size-bolder">ToDo App</h3>
                     <Link to="/">
                         <button
                             className="btn logout-btn"
