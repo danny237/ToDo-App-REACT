@@ -41,3 +41,17 @@
     color: #fff;
     background: #1c65be;
 }
+
+@media only screen and (max-width: 500px){
+    .login-container{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .login-container{
+        width: 300px;
+        margin: 0 auto;
+    }
+}

@@ -44,7 +44,7 @@ export default function TodoItems({ tasks, setTasks }) {
                 tasks.map((item, index) => (
                     <div key={index} className="item m-2 mb-3">
                         <div className="row d-flex">
-                            <div className="col-10 d-flex flex-column" >
+                            <div className="info col col-9 d-flex flex-column" >
                                 <div className="align-self-start m-2">
                                     {
                                         item.isComplete ?
